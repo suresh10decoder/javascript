@@ -1,0 +1,33 @@
+<html>
+<head>
+  <tittle></tittle>
+</head>
+
+<body>
+
+  <label><b>Enter UserName</b></label>
+  <input type="text" name="name" id="user_input">
+
+  <label><b>Email</b></label>
+  <input type="text" name="Email" id="Email">
+
+  <label><b>Location</b></label>
+  <input type="text" name="Location" id="Location">
+
+
+  <input type="submit" onclick="showInput();"><br />
+  <label>Your input: </label>
+  <p><span id='display'></span></p>
+  <script>
+    function showInput() {
+      var input = document.getElementById("user_input").value;
+      var input1 = document.getElementById("Email").value;
+      var input2 = document.getElementById("Location").value;
+      var obj = {  Name:input };
+      document.getElementById('display').innerHTML = JSON.stringify(obj);
+
+    }
+  </script>
+</body>
+
+</html>
